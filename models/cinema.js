@@ -14,11 +14,17 @@ Cinema.prototype.filmTitles = function () {
   return filmTitles;
 }
 
-console.log(this.filmTitles());
+
 
 
 // should be able to find a film by title
 
+Cinema.prototype.findTitle = function(title) {
+  const result = this.films.filter(function (currentFilm) {
+    return (currentFilm.title == title);
+  });
+  return result;
+}
 
 // should be able to filter films by genre
 
