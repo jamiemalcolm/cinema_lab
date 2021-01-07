@@ -56,5 +56,13 @@ Cinema.prototype.maxLength = function(length) {
   }
 
 // should be able to calculate total running time of all films
-
+Cinema.prototype.totalLength = function (){
+  const filmLengths = this.films.map(function (film){
+    return film.length;
+  });
+  total = filmLengths.reduce(function(runningTotal, length){
+    return runningTotal + length;
+  });
+  return total;
+}
 module.exports = Cinema;

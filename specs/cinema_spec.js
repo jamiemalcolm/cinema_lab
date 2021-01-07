@@ -57,7 +57,7 @@ describe('Cinema', function () {
     assert.strictEqual(actual, cinema.maxLength(170));
   });
 
-  xit('should be able to calculate total running time of all films', function () {
+  it('should be able to calculate total running time of all films', function () {
     const actual = 622;
     assert.strictEqual(actual, cinema.totalLength());
   });
