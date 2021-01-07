@@ -27,7 +27,12 @@ Cinema.prototype.findTitle = function(title) {
 }
 
 // should be able to filter films by genre
-
+Cinema.prototype.findGenre = function (genre) {
+  const result = this.films.filter(function (currentFilm){
+    return (currentFilm.genre == genre);
+  });
+  return result;
+}
 
 // should be able to check whether there are some films from a particular year (true/false)
 
