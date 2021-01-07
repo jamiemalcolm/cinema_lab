@@ -41,7 +41,8 @@ const  result = this.films.filter(function (currentFilm){
   })
   if (result.length > 0){
     return true;
-  }
+  } else {return false;}
+  
 }
 // should be able to check whether all films are over a particular length (true/false)
 

@@ -48,7 +48,7 @@ describe('Cinema', function () {
     assert.deepStrictEqual(actual, cinema.filmsOfYear(2017));
   });
 
-  xit('should be able to check whether there are no films from a particular year', function () {
+  it('should be able to check whether there are no films from a particular year', function () {
     const actual = false;
     assert.strictEqual(actual, cinema.filmsOfYear(2020));
   });
