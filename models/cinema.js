@@ -65,4 +65,23 @@ Cinema.prototype.totalLength = function (){
   });
   return total;
 }
+
+// Filter By year
+Cinema.prototype.filterByYear = function(year) {
+  const  result = this.films.filter(function (currentFilm){
+      return currentFilm.year == year;
+  });
+  return result;
+}
 module.exports = Cinema;
+
+
+// if property === year do filter by year(value)
+// else if property ===genre do filter by genre(value)
+Cinema.prototype.filmsByProperty = function (property, value) {
+  if(property === 'year'){
+   return this.filterByYear(value);
+  }else if (property === 'genre'){
+    return this.findGenre(value);
+  }
+}

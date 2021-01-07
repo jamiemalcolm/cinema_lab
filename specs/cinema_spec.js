@@ -1,4 +1,5 @@
 const assert = require('assert');
+const { O_TRUNC } = require('constants');
 const Cinema = require('../models/cinema.js');
 const Film = require('../models/film.js');
 
@@ -61,5 +62,12 @@ describe('Cinema', function () {
     const actual = 622;
     assert.strictEqual(actual, cinema.totalLength());
   });
-    
+  it('should be able to filter films by year', function (){
+    const actual = [moonlight];
+    assert.deepStrictEqual(actual, cinema.filterByYear(2016));
+  });
+  it('should be able to filter films by year/genre and value', function (){
+    const actual = [moonlight];
+    assert.deepStrictEqual(actual, cinema.filmsByProperty('year',2016));
+  });
 });
