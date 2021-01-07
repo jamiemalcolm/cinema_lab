@@ -43,7 +43,7 @@ describe('Cinema', function () {
     assert.deepStrictEqual(actual, cinema.findGenre('drama'));
   });
 
-  xit('should be able to check whether there are some films from a particular year', function (){
+  it('should be able to check whether there are some films from a particular year', function (){
     const actual = true;
     assert.deepStrictEqual(actual, cinema.filmsOfYear(2017));
   });

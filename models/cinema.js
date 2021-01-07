@@ -35,8 +35,14 @@ Cinema.prototype.findGenre = function (genre) {
 }
 
 // should be able to check whether there are some films from a particular year (true/false)
-
-
+Cinema.prototype.filmsOfYear = function(year) {
+const  result = this.films.filter(function (currentFilm){
+    return currentFilm.year == year;
+  })
+  if (result.length > 0){
+    return true;
+  }
+}
 // should be able to check whether all films are over a particular length (true/false)
 
 
