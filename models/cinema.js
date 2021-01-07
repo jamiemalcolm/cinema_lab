@@ -45,7 +45,15 @@ const  result = this.films.filter(function (currentFilm){
   
 }
 // should be able to check whether all films are over a particular length (true/false)
-
+Cinema.prototype.maxLength = function(length) {
+  const  result = this.films.filter(function (currentFilm){
+      return (currentFilm.length == length);
+    })
+    if (result.length > 0){
+      return true;
+    } else {return false;}
+    
+  }
 
 // should be able to calculate total running time of all films
 

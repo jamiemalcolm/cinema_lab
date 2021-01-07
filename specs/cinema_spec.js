@@ -52,7 +52,7 @@ describe('Cinema', function () {
     const actual = false;
     assert.strictEqual(actual, cinema.filmsOfYear(2020));
   });
-  xit('should be able to check whether all films are over a particular length', function() {
+  it('should be able to check whether all films are over a particular length', function() {
     const actual = false;
     assert.strictEqual(actual, cinema.maxLength(170));
   });
